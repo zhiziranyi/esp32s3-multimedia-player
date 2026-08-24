@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:resources.4dsystems.com.au)",
+      "Read(//c/Users/13957/.platformio/platforms/espressif32/boards/**)",
+      "Bash(\"C:/Users/13957/.platformio/penv/Scripts/pio.exe\" run *)",
+      "Bash(\"C:/Users/13957/.platformio/penv/Scripts/pio.exe\" pkg *)"
+    ]
+  }
+}
