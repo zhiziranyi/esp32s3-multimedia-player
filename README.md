@@ -78,7 +78,7 @@
 ## WiFi 投屏
 
 ### ESP32 端
-1. 确认 WiFi 名 `TEST`，密码 `A123456789`（代码中硬编码）
+1. 从 `include/secrets.example.h` 复制生成本机 `include/secrets.h`，填写本地 WiFi 名称和密码（该文件不会上传）
 2. 切换到第 4 个标签 "Stream"
 3. 屏幕会显示 ESP32 的 IP 地址
 4. 按摇杆 ENTER 进入接收模式
