@@ -101,7 +101,7 @@ C:\Users\13957\nodejs\node-v22.14.0-win-x64\node.exe tools\screen_sender.js 192.
 C:\Users\13957\nodejs\node-v22.14.0-win-x64\node.exe tools\screen_sender.js 192.168.43.62 25
 ```
 
-> 电脑必须和 ESP32 连接**同一个 WiFi** (`TEST` / `A123456789`)
+> 电脑必须和 ESP32 连接**同一个 Wi-Fi**。网络名称和密码只写入本机忽略文件 `include/secrets.h`，不要写入 README、源码或提交记录。
 
 ## 技术架构
 
@@ -126,3 +126,13 @@ pio run -t upload # 烧录
 ```
 
 PlatformIO 板型: `4d_systems_esp32s3_gen4_r8n16`
+
+## 工程交接与验证
+
+- [交接文档：架构、运行路径、网络边界与排障](docs/HANDOVER.md)
+- [验证清单：SD、文件浏览、网络服务和投屏](docs/VALIDATION.md)
+- `include/secrets.example.h` 是公开的网络配置模板；实际 `include/secrets.h` 只保存在本机。
+
+## 简历项目描述
+
+**ESP32-S3 多媒体播放器**：基于 ESP32-S3 和 LVGL 实现 240×240 嵌入式媒体 UI，集成 SPI TFT、SD 卡文件系统、中文文本/图片/自定义视频格式浏览、Wi-Fi TCP RGB565 投屏、NTP 授时与天气服务，并完成本地凭据隔离和资源受限下的交互调度。
